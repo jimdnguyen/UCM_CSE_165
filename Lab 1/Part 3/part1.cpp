@@ -1,5 +1,5 @@
 #include <iostream>
-#include <declaration.h>
+#include "declaration.h"
 
 int sum(int x,int y)
 {
