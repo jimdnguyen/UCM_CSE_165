@@ -2,19 +2,16 @@
 #include <string>
 #include <fstream>
 
-
-
 int main()
 {
     std::string breakWord = "quit";
     std::string inputWord;
     std::ifstream cppFile("inputWords.cpp");
     int caseNumber = 0;
-    //the interesting words ill use will be #include , int , inputWord
+    //the interesting words I'll use are #include , int , inputWord
 
     while(cppFile>> inputWord && inputWord != breakWord)
     {   
-        //std::cout << inputWord << std::endl;
         if(inputWord == "#include")
         {
             caseNumber = 1;
@@ -44,10 +41,6 @@ int main()
 
     // quit
     // that is how i quit my while loop
-
-    
-
-    
 }
 
 // I used this website to see how to assign values to the string https://www.cplusplus.com/reference/string/string/assign/
