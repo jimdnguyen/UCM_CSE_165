@@ -12,12 +12,10 @@ int main(int argc, char* argv[]) {
         exit(1);
     }
     double d = atof(argv[1]);
-    unsigned char* cp =
-    reinterpret_cast<unsigned char*>(&d);
+    unsigned char* cp = reinterpret_cast<unsigned char*>(&d);
     for(int i = sizeof(double); i > 0 ; i -= 2) {
         printBinary(cp[i-1]);
         printBinary(cp[i]);
-    } 
-
+    }
     std::cout<<std::endl;
 }///:~
