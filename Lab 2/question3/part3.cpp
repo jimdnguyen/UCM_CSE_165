@@ -25,7 +25,6 @@ int main(int argc, char* argv[])
 
         for(int i = 7; i >= 0; i--)// this for loop is taken from printBinary.cpp
             {
-                
                 if(cp2 & (1 << i))
                 {
                     std::cout << "1";
