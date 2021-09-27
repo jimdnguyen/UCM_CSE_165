@@ -1,0 +1,19 @@
+//: C05:Handle.h
+// Handle classes
+#ifndef HANDLE_H
+#define HANDLE_H
+class Handle {
+ struct Cheshire; // Class declaration only
+ Cheshire* smile;
+public:
+ void initialize();
+ void cleanup();
+ int read();
+ void change(int);
+};
+#endif // HANDLE_H ///:~ 
+
+//This is all the client programmer is able to see. The line
+//struct Cheshire; 
+
+// Code is taken from Thinking in C++ textbook on page 296
