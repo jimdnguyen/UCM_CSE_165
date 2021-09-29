@@ -1,16 +1,42 @@
 #include "StackOfInt.h"
-#include <vector>
+#include "require.h"
+#include <iostream>
 
-struct StackOfInt::stacksOfInt{
-    int i;
-    std::vector<int> i2;
-};
+void StackOfInt::stacksOfInt::initialize(int array, stacksOfInt* nxt){
+    value = array;
+    next = nxt;
+}
 
 void StackOfInt::initialize(){
-    ptr = new stacksOfInt;
-    ptr->i = 0;
+    head = 0;
+}
+
+void StackOfInt::push(int array){
+    stacksOfInt* tmp = new stacksOfInt;
+    tmp->initialize(array, head);
+    head = tmp;
+}
+
+void* StackOfInt::pop(){
+    if(head == 0){
+        return 0;
+    }
+    int result = head->value;
+    stacksOfInt* oldHead = head;
+    head = head->next;
+    delete oldHead;
+    return head;
+}
+
+void StackOfInt::peek(){
+    require(head != 0, "Stack empty");
+    stacksOfInt* tmp = head;
+    while(tmp != NULL){
+        std::cout << tmp->value << std::endl;
+        tmp = tmp->next;
+    }
 }
 
 void StackOfInt::cleanup(){
-    delete ptr;
+    while(pop());
 }

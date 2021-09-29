@@ -3,12 +3,17 @@
 
 class StackOfInt
 {
-    struct stacksOfInt;
-    stacksOfInt* ptr;
-    
+    struct stacksOfInt{
+        int value;
+        stacksOfInt* next;
+        void initialize(int array, stacksOfInt* nxt);
+    }* head;
+
     public:
         void initialize();
-        void push(void* dat);
+        void push(int array);
+        void peek();
+        void* pop();
         void cleanup();
 };
 
