@@ -5,7 +5,7 @@ class firstClass
     
     public:
         int sumF = 0;
-        int tmpx = 15;
+        int tmpx = 15; // edit this value to change the value of x
         int *x = &tmpx;
         int addSum(int x, int* y)
         {
@@ -18,7 +18,7 @@ class secondClass
 {
     public:
         int sumS = 0;
-        int tmpy = 25;
+        int tmpy = 25; // edit this value to change the value of y
         int *y = &tmpy;
         int addSum(int *x, int y)
         {

@@ -2,7 +2,7 @@
 #define StackImp_h
 #include <vector>
 
-#define n 5
+#define n 5 // change this to increase the size of the fixed array
 
 class StackImp{
     int head;

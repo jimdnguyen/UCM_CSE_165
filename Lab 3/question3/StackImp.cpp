@@ -2,8 +2,6 @@
 #include <iostream>
 #include <vector>
 
-#define n 5
-
 int chosen = 0;
 
 void StackImp::initialize(int choice){

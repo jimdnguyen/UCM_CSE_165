@@ -13,7 +13,7 @@ class Hen
 
 class Nest
 {  
-    int Nestpriv = 2;
+    int Nestpriv = 2; // change this value to get a different output
     public:
         void display(Egg a);
         friend class Egg;
@@ -22,7 +22,7 @@ class Nest
 
 class Egg
 {
-    int Eggpriv = 5;
+    int Eggpriv = 5; // change this value to get a different output
     public:
         void display(Nest b);
         friend class Nest;
@@ -61,13 +61,13 @@ void Egg::display(Nest b)
 int main()
 {
     //need to find exercise6 to even attempt to modify
-    Hen Chicken;
-    Nest Chicken2;
-    Egg Chicken3;
+    Hen ChickenHen;
+    Nest ChickenNest;
+    Egg ChickenEgg;
 
-    Chicken.display();    
-    Chicken2.display(Chicken3);    
-    Chicken3.display(Chicken2);
+    ChickenHen.display();    
+    ChickenNest.display(ChickenEgg);    
+    ChickenEgg.display(ChickenNest);
 
     
     return 0;

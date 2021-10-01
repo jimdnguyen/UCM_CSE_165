@@ -16,3 +16,5 @@ this isn’t perfect implementation hiding, it’s a big improvement.
 
 Code is taken from Thinking in C++ textbook on page 297-298
 */
+
+//modifying the code based on the code given from Thinking in C++ textbook on page 314-315

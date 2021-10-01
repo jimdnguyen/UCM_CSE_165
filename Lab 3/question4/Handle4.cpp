@@ -34,3 +34,5 @@ void Handle4::initialize() {
     smile->i = 0;
 }
 */
+
+//modifying the code based on the code given from Thinking in C++ textbook on page 314-315

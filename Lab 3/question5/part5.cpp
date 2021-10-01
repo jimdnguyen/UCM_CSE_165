@@ -9,9 +9,7 @@ class StringVector : public std::vector<void*>{
        void push_back(void* s){
            std::string* tmpS = static_cast<std::string*>(s);
            std::string tmpSt = *tmpS;
-           std::cout<<*tmpS<<std::endl;
            sv.push_back(tmpSt);
-           std::cout<<sv[0]<<std::endl;
        }  
 
        void operator[](size_t index){
@@ -29,3 +27,5 @@ int main()
 
     return 0;
 }
+
+//https://stackoverflow.com/questions/3076968/converting-a-void-to-a-stdstring helped me convert the void back to string
