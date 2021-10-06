@@ -2,18 +2,20 @@
 
 class Subject{
     public:
-    
-    void f(){
+
+    virtual void f(){
         std::cout<<"This print is for function f in Subject"<<std::endl;
     }
-    void g(){
+    virtual void g(){
         std::cout<<"This print is for function g in Subject"<<std::endl;
     }
-    void h(){
+    virtual void h(){
         std::cout<<"This print is for function h in Subject"<<std::endl;
     }
 };
 class Implementation1 : public Subject{
+    public:
+
     void f(){
         std::cout<<"This print is for function f in Implemention1"<<std::endl;
     }
@@ -25,6 +27,8 @@ class Implementation1 : public Subject{
     }
 };
 class Implementation2 : public Subject{
+    public:
+    
     void f(){
         std::cout<<"This print is for function f in Implemention2"<<std::endl;
     }
@@ -45,19 +49,19 @@ class Proxy : public Subject{
        ptrSubject->f();
     }
     void g(){
-
+        ptrSubject->g();
     }
     void h(){
-        
+        ptrSubject->h();
     }       
+
+    void change(Subject* tmpPtrSubject){
+        ptrSubject = tmpPtrSubject;
+    }
     
-        Proxy(Subject* realSubject);
+    //Proxy(Subject* ptrSub) : Subject(), ptrSubject(ptrSub){};
+    Proxy(Subject* secPtrSubject) : Subject() , ptrSubject(secPtrSubject){};
 };
-
-Proxy::Proxy(Subject* realSubject){
-    ptrSubject = realSubject;
-}
-
 
 int main(){
 
@@ -66,9 +70,16 @@ int main(){
 
     Proxy pxy(&implem1);
 
-    pxy.f();
+    pxy.f(); 
+    pxy.g();
+    pxy.h();
 
-    //math2.Implementation1;
+    pxy.change(&implem2);
+    std::cout<<std::endl;
+
+    pxy.f(); 
+    pxy.g();
+    pxy.h();
 
     return 0;
 }

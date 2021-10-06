@@ -12,7 +12,7 @@ class B {
     public:
         B(int ii) : i(ii) {}
         ~B() {}
-        void f() const {}
+        virtual void f() const {}
 };
 class C : public B {
     A a;
@@ -27,6 +27,9 @@ class C : public B {
 
 int main() {
 C c(47);
+B* bc = &c;
+bc->f();
 } ///:~ 
 
 // The majority of this code I used from the textbook Thinking in C++ on pages 621-622
+//added code based on code given in textbook Thinking in C++ on pages 676-677
