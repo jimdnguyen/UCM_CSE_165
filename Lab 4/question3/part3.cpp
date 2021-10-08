@@ -3,7 +3,7 @@
 #define n 5
 
 class arrayInt{
-    int array[n] = {5,2,3,6,9};
+    int array[n] = {5,2,3,6,9}; // change these values to get different input/output
     
     public:
         

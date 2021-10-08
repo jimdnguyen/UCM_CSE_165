@@ -21,11 +21,11 @@ void modPtr2Value(int** ptr, int *value){//helped with stackflow
 
 int main(){
 
-    int a[4] = {5,10,15,20};
+    int a[4] = {5,10,15,20}; // change the value of these to get different inputs
     int* ptra = a;
     int* refa;
-    int a2 = 50;
-    int b = 25;
+    int a2 = 50; // change the value of these to get different inputs
+    int b = 25; // change the value of these to get different inputs
     int* ptra2 = &a2;
     int* ptrb;
 

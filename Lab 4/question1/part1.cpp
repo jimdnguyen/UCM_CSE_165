@@ -59,7 +59,6 @@ class Proxy : public Subject{
         ptrSubject = tmpPtrSubject;
     }
     
-    //Proxy(Subject* ptrSub) : Subject(), ptrSubject(ptrSub){};
     Proxy(Subject* secPtrSubject) : Subject() , ptrSubject(secPtrSubject){};
 };
 

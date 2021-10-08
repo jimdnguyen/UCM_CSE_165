@@ -12,7 +12,7 @@ class B {
     public:
         B(int ii) : i(ii) {}
         ~B() {}
-        virtual void f() const {}
+        virtual void f() const {} // virtual in base class
 };
 class C : public B {
     A a;
@@ -27,8 +27,8 @@ class C : public B {
 
 int main() {
 C c(47);
-B* bc = &c;
-bc->f();
+B* bc = &c; // upcasted
+bc->f(); // virtual call
 } ///:~ 
 
 // The majority of this code I used from the textbook Thinking in C++ on pages 621-622
