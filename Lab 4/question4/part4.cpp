@@ -30,11 +30,11 @@ Text::Text(int count){
 int main(){
 
     
-    /*
+    /* this is default
     Text cpp;
     cpp.contents();
     */
-   ///*
+   ///* the 1 in text gets text from file
     Text cpp2(1);
     cpp2.contents();
     //*/
