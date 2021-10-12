@@ -11,6 +11,7 @@ int main(int argc, char* argv[])
     
     double d = atof(argv[1]);
     unsigned char* cp = reinterpret_cast<unsigned char*>(&d);
+    std::cout<<sizeof(cp)<<std::endl;
     //
     int counter = 0;
     unsigned char cp2;
