@@ -7,8 +7,7 @@ class Clock{
 
 public:
     virtual void virtualVoid(){
-  
-
+        
     };
     void nonVirtualVoid(){
     

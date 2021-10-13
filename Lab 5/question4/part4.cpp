@@ -5,8 +5,8 @@
 
 class Memory{
     int x = 4;
-    double y = 22.0;
-    float z = 10.0;
+    double y = 22.5;
+    float z = 10.4;
     char a = 'a';
     
     public:
@@ -25,7 +25,7 @@ class Memory{
         };
         
         virtual void tmp1(){std::cout<<"Virtual 1"<<std::endl;};
-        virtual void tmp2(){std::cout<<"Virtual 1"<<std::endl;};;
+        virtual void tmp2(){std::cout<<"Virtual 1"<<std::endl;};
 
         
 };
