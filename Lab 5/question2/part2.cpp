@@ -32,3 +32,4 @@ int main() {
 //! << p[1]->sit() << endl; // Illegal
 } ///:~ 
 // Taken from Textbook Thinking in C++ on page 685-686
+//TA checked the code and said it looks good.

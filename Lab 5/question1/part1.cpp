@@ -32,3 +32,4 @@ int main() {
 } ///:~
 
 //Taken from Textbook Thinking in C++ on page 665
+//TA looked at code and said it looks good.
