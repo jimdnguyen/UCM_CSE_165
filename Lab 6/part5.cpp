@@ -25,16 +25,17 @@ class tmpOpInt{
         }
 
         void* operator new[](size_t size){
-            //printf("==>new[]: %lu bytes\n", size);
-            //return ::new char[size];
-            printf("operator new: %lu Bytes\n", size);
-            void*p = malloc(size);
-            return p;
+            printf("==>new[]: %lu bytes\n", size);
+            return ::new char[size];
+            //printf("operator new: %lu Bytes\n", size);
+            //void*p = malloc(size);
+            //return p;
             
         }
         void operator delete[](void* p){
             printf("==>delete[]\n");
-            free(p);
+            //::delete []p; //has 1 warning
+            free(p);//no warning
         }
 };
 
@@ -45,7 +46,7 @@ int main(){
 
     puts("creating & destroying tmpOpArray");
     tmpOpInt* newArray = new tmpOpInt[3];
-    delete []newArray;
+    delete[] newArray;
 
     return 0;
 }
@@ -59,5 +60,5 @@ int main(){
 //we dont want that for the question for single 
 //but for array verison, that is okay.
 
-//most of my code main fro the code given in from lecture 13(2) from the professor
+//most of my code mainly came from the code that is given to us from the lecture slides lecture 13(2) from the professor
 //looks like for me, my operator new holds an extra 8 bytes to store info

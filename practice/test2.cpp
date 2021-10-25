@@ -5,13 +5,13 @@ using namespace std;
 struct A{
     public:
      A() {cout << "A\n";}
-     virtual ~A(){cout <<"~A\n";}
+      ~A(){cout <<"~A\n";}
 };
 
 class B : public A{
     public:
      B() {cout << "B\n";}
-     virtual ~B(){cout<<"~B\n";}
+      ~B(){cout<<"~B\n";}
 };
 
 int main(){
@@ -21,3 +21,4 @@ int main(){
     A* a = new B;
     delete a;
 }
+
