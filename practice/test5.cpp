@@ -4,7 +4,7 @@ int x, y;
 int *px, *py;
 
 int f ( int a, int b ) { // it wants the reference of b not passing value of b
-int s = *px + *py; // = 2, ignore this the second runthrough, know s = 0 from previous run
+static int s = *px + *py; // = 2, ignore this the second runthrough, know s = 0 from previous run
 cout << s << endl; // prints 2 first, next 0 since s = 0 from previous runthrough
 cout << "b" << b << endl;
 cout << "a" << a << endl;
