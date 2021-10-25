@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include "PStash.h"
 
 #define size 10
 
@@ -22,19 +23,27 @@ class Counted{
 int Counted::count = 0;
 
 int main(){
-    
-    std::vector<Counted*> vecCounted;
-       
-    for(int i = 0; i < size; i++){
-        vecCounted.push_back(new Counted);
-    }
-    for(int i = 0; i < size; i++){
-        vecCounted[i]->f();
-    }
-    for(int i = 0; i < size; i++){
-        delete vecCounted[i];
-    }
+
+   PStash tmpStash;
+  
+
+   for(int i = 0; i < size; i++){
+       tmpStash.add(new Counted);
+   }
+   
+   for(int j = 0; j < size; j++){
+
+    ((Counted*)tmpStash[j])->f();
+      
+   }
+  
+   for(int k = size; k >= 0; k--){
+       delete (Counted*)tmpStash.remove(k);
+   }
+  
     return 0;
 }
 
-//I reused my code from part2 to part3
+//I reused my code from part3 for part4
+//I used code from the textbook Thinking in C++ from pages 586 - 591
+//TA looked over my code/output and says its good

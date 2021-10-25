@@ -56,7 +56,7 @@ int main(){
 //still need to allocate memory
 //most of my code mainly came from the code that is given to us from the lecture slides lecture 13(2) from the professor 
 //and the textbook Thinking in C++ on pages 607-609
-
+//TA looked it over and said it looks good
 
 /*
  void* operator new(size_t size){

@@ -26,7 +26,7 @@ int main(){
     for(int i = 0; i < size; i++){
         vecCounted.push_back(new Counted);
     }
-    for(int i = 0; i < size; i++){
+    for(int i = size; i >= 0; i--){
         delete vecCounted[i];
     }
     return 0;
@@ -36,3 +36,4 @@ int main(){
 //Websites used for Question 2
 //https://www.daniweb.com/programming/software-development/threads/247157/warning-taking-address-of-temporary
 //I also used the practice midterm to help me figure it out too
+//TA looked over my code/output and says its good

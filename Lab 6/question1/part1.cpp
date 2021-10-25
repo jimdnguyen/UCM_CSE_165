@@ -18,10 +18,12 @@ int Counted::count = 0;
 
 int main(){
     
-    Counted();
+    Counted c, b , a;
+    //Counted();
     return 0;
 }
 
 //websites that helped me with queston1
 //http://cplusplus.com/forum/beginner/100701/
 //https://stackoverflow.com/questions/55329892/what-does-this-compiler-error-means-qualified-id-in-declaration-before-to
+//TA looked over my code/output and says its good

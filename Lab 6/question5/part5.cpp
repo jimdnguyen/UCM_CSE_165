@@ -62,3 +62,4 @@ int main(){
 
 //most of my code mainly came from the code that is given to us from the lecture slides lecture 13(2) from the professor
 //looks like for me, my operator new holds an extra 8 bytes to store info
+//TA looked over code and said it looks good
