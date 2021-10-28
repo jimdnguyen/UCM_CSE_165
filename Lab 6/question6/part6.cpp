@@ -34,6 +34,7 @@ std::vector<std::string> readVecString::holdString;
 
 int main(){
     char memory[sizeof(readVecString)];
+    
     std::string tmp = "hi";
     std::string tmp2 = "bye";
 
