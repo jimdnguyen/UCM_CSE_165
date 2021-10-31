@@ -1,8 +1,9 @@
 #include <iostream>
 using namespace std;
-class Point{
-    public:
-        Point(){cout<<"Constructor called";}
+class Point
+{
+public:
+    Point() { cout << "Constructor called"; }
 };
 int main()
 {

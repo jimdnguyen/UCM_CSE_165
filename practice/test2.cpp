@@ -2,23 +2,26 @@
 
 using namespace std;
 
-struct A{
-    public:
-     A() {cout << "A\n";}
-      ~A(){cout <<"~A\n";}
+struct A
+{
+public:
+    A() { cout << "A\n"; }
+    ~A() { cout << "~A\n"; }
 };
 
-class B : public A{
-    public:
-     B() {cout << "B\n";}
-      ~B(){cout<<"~B\n";}
+class B : public A
+{
+public:
+    B() { cout << "B\n"; }
+    ~B() { cout << "~B\n"; }
 };
 
-int main(){
-    if(true){
+int main()
+{
+    if (true)
+    {
         B b;
     }
-    A* a = new B;
+    A *a = new B;
     delete a;
 }
-
