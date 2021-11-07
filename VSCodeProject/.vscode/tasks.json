@@ -1,0 +1,34 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++.exe build active file",
+            "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+            "args": [
+                "-g",
+                "-std=c++17",
+                "-o",
+                "${workspaceFolder}\\main.exe",
+                "-I${workspaceFolder}\\include",
+                "-L${workspaceFolder}\\lib",
+                
+                "-lSOIL",
+                "-lopengl32",
+                "-lglfw3dll",
+                
+                
+                "${workspaceFolder}\\src\\*.cpp",
+                "${workspaceFolder}\\src\\glad\\glad.c",
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build",
+            "detail": "compiler: C:\\msys64\\mingw64\\bin\\g++.exe"
+        },
+    ]
+}
