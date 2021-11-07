@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1636255768 source:c:\github\ucm_cse_165\codeblockproject\main.cpp
+	<GL/glut.h>
+	<SOIL/SOIL.h>
+
