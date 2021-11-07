@@ -32,5 +32,5 @@ int main(int argc, char** argv)
 Links Used to Help Run OpenGL/SOIL
 https://medium.com/swlh/setting-opengl-for-windows-d0b45062caf
 This is so much easier to use than VSCode
-
+https://packages.msys2.org/package/mingw-w64-x86_64-soil?repo=mingw64
 */
