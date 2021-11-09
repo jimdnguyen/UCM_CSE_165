@@ -20,8 +20,7 @@ public:
     friend istream &operator>>(istream &is, const T &ia);
     int getsz() { return sz; }
 };
-ostream &
-operator<<(ostream &os, IntArray<int> &ia)
+ostream &operator<<(ostream &os, IntArray<int> &ia)
 {
     int size = ia.getsz();
     for (int j = 0; j < size; j++)
