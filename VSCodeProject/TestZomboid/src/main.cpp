@@ -9,7 +9,7 @@ int main(int argc, char **argv)
 	interface->setup();
 	game->setup();
 
-	//interface->run(game);
+	interface->run(game);
 
 	delete game;
 	delete interface;
