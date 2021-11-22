@@ -1,0 +1,10 @@
+bean
+burger
+test 
+human 
+hangman 
+hamster
+computer
+desktop
+programming
+vscode
