@@ -1,0 +1,5 @@
+Zomboid
+    Use the mingw64 shell
+    Change include path
+    cmp: mingw32-make.exe build
+    run: mingw32-make.exe run
