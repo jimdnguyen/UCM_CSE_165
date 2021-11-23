@@ -17,9 +17,9 @@ public:
         std::cout << "You can only guess the letters wrong " << N << " times!" << std::endl;
     }
     ~Hangman() {}
-    bool setGuessState() { guessedYet = false; }
+    void setGuessState() { guessedYet = false; }
     bool getGuessState() { return guessedYet; }
-    char setWord(char *guessWord) { word = guessWord; }
+    void setWord(char *guessWord) { word = guessWord; }
     char *getWord() { return word; }
 };
 
@@ -47,7 +47,7 @@ int main()
     game.setWord(guessWord);
     char input;
     char *tmpWord = game.getWord();
-    std::cout << tmpWord << std::endl;
+    //std::cout << tmpWord << std::endl;
     std::string displayWord;
     for (int i = 0; i < size; i++)
     {
