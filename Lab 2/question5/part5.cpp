@@ -3,45 +3,44 @@
 struct linkedList
 {
     int count;
-    linkedList* next;
-    
+    linkedList *next;
 };
 
-void createNewLList(linkedList* head, int count)
+void createNewLList(linkedList *head, int count)
 {
-    linkedList* tmp = new linkedList;
+    linkedList *tmp = new linkedList;
     tmp->count = count;
     tmp->next = NULL;
 
-    linkedList* ptrhead = head;
-    while(ptrhead->next != NULL)
+    linkedList *ptrhead = head;
+    while (ptrhead->next != NULL)
     {
         ptrhead = ptrhead->next;
     }
     ptrhead->next = tmp;
 }
 
-void printLList(linkedList* head)
+void printLList(linkedList *head)
 {
-    linkedList* tmp = head;
-    while(tmp != NULL)
+    linkedList *tmp = head;
+    while (tmp != NULL)
     {
-        std::cout<<"Pointer Value is: "<< head->next << std::endl;
-        std::cout<<"Count Value is: "<<tmp->count<<std::endl;
+        std::cout << "Pointer Value is: " << tmp->next << std::endl;
+        std::cout << "Count Value is: " << tmp->count << std::endl;
         tmp = tmp->next;
     }
 }
 
 int main()
 {
-    linkedList* Node = new linkedList;
+    linkedList *Node = new linkedList;
     //Node->next = NULL;
     int counter = 1;
     Node->count = counter;
 
     int lengthOfList = 5;
 
-    for(int i = 1; i < lengthOfList; i++)
+    for (int i = 1; i < lengthOfList; i++)
     {
         /* this code is if in case it meant to be the count to 0, not the pointer.
         if(i == lengthOfList - 1)
