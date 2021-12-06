@@ -42,26 +42,49 @@ public:
     Matrix operator*(const std::vector<int> *v)
     {
         Matrix tmp;
-
+        //std::cout << tmp.matrixHolder[1][0] << std::endl;
         int count = 0;
         int tmp2 = 0;
         int tmp3 = 0;
         tmp.y = 1;
-        y = 1;
-        for (int i = 0; i < x; i++)
+        std::vector<int> tmp4;
+        for (int k = 0; k < x; k++)
         {
-            // std::cout << matrixHolder[0][i] << std::endl;
-            // std::cout << v->at(i) << std::endl;
-            tmp2 = matrixHolder[2][i] * v->at(i);
-            tmp3 += tmp2;
-            std::cout << tmp2 << std::endl;
-            count++;
+            for (int i = 0; i < x; i++)
+            {
+                tmp2 = matrixHolder[k][i] * v->at(i);
+                tmp3 += tmp2;
+                for (int j = 0; j < y; j++)
+                {
+                    if (i == x - 1)
+                    {
+                        tmp.matrixHolder[k][j] = tmp3;
+                    }
+                }
+
+                //}
+            }
+            tmp3 = 0;
         }
-        tmp.matrixHolder[0][0] = tmp3;
-        std::cout << tmp3 << std::endl;
+        //std::cout << tmp << std::endl;
         return tmp;
-    };                                 // 14, 32, 50
-    Matrix operator*(const Matrix &n); // multiplying matrix by matrix (const Matrix &m, const Matrix &n) doesnt work
+    }; // 14, 32, 50
+    // multiplying matrix by matrix (const Matrix &m, const Matrix &n) doesnt work
+    Matrix operator*(const Matrix &n)
+    {
+        Matrix tmp;
+        for (int i = 0; i < n.x; i++)
+        {
+            for (int j = 0; j < n.x; j++)
+            {
+                for (int k = 0; k < n.y; k++)
+                {
+                    tmp.matrixHolder[i][j] += matrixHolder[i][k] * n.matrixHolder[k][j];
+                }
+            }
+        }
+        return tmp;
+    };
 };
 
 std::ostream &operator<<(std::ostream &out, const Matrix &m)
@@ -97,6 +120,11 @@ int main()
     Matrix stuff4;
     stuff4 = stuff * &data;
     std::cout << stuff4;
+
+    Matrix stuff5;
+    std::cout << stuff5;
+    stuff5 = stuff5 * stuff;
+    std::cout << stuff5;
     return 0;
 }
 
@@ -105,3 +133,5 @@ int main()
 // https://stackoverflow.com/questions/6946217/how-to-access-the-contents-of-a-vector-from-a-pointer-to-the-vector-in-c
 // https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.2-Multiplying-Matrices-and-Vectors/
 // https://www.mathsisfun.com/algebra/matrix-multiplying.html
+// https://www.geeksforgeeks.org/c-program-multiply-two-matrices/
+// TA looked the code and says it looks good
