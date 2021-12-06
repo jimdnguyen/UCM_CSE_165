@@ -1,29 +1,74 @@
 #include <iostream>
-//convert into template once finished
+// convert into template once finished
 
+// template <typename T>
+// class Node
+// {
+// public:
+//     T data;
+//     Node<T> *next;
+// };
+
+template <typename T>
 class SList
 {
-public:
     class Node
     {
     public:
-        int data;
+        T data;
         Node *next;
     };
+
+public:
     Node *headNode;
     Node *tailNode;
+
     SList()
     {
         headNode = new Node;
         tailNode = new Node;
     }
     ~SList() { std::cout << "Destructor SList called" << std::endl; }
-    void insert(int data);
+    void insert(T data);
     void print();
-    void erase(int location); //find data and delete it
+    void erase(T location); // find data and delete it
+    class iterator
+    {
+        friend class SList;
+        Node *curNode;
+
+    public:
+        iterator(Node *tmpNode) : curNode(tmpNode) {}
+        iterator() : curNode(nullptr) {}
+        iterator operator++(T data)
+        {
+            if (curNode)
+            {
+                curNode = curNode->next;
+                return *this;
+            }
+        }
+        bool operator!=(const iterator &it)
+        {
+            return curNode != it.curNode;
+        }
+        T &operator*() const
+        {
+            return curNode->data;
+        }
+    };
+    iterator begin() const
+    {
+        return iterator(headNode);
+    }
+    iterator end() const
+    {
+        return iterator(tailNode);
+    }
 };
 
-void SList::insert(int data)
+template <typename T>
+void SList<T>::insert(T data)
 {
     Node *tmp = new Node;
     tmp->data = data;
@@ -37,7 +82,8 @@ void SList::insert(int data)
     ptrhead->next = tmp;
 }
 
-void SList::print()
+template <typename T>
+void SList<T>::print()
 {
     Node *tmp = headNode;
     while (tmp != NULL)
@@ -50,7 +96,7 @@ void SList::print()
 
 int main()
 {
-    SList head;
+    SList<int> head;
     std::cout << "slist cteated" << std::endl;
     int counter = 1;
     head.headNode->data = counter;
@@ -71,5 +117,6 @@ int main()
     return 0;
 }
 
-//https://www.geeksforgeeks.org/difference-between-singly-linked-list-and-doubly-linked-list/
-//http://www2.lawrence.edu/fast/GREGGJ/CMSC270/linked/iterators.html
+// https://www.geeksforgeeks.org/difference-between-singly-linked-list-and-doubly-linked-list/
+// http://www2.lawrence.edu/fast/GREGGJ/CMSC270/linked/iterators.html
+// https://www.geeksforgeeks.org/implementing-iterator-pattern-of-a-single-linked-list/
