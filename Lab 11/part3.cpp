@@ -103,3 +103,5 @@ int main()
 // https://www.geeksforgeeks.org/vector-of-vectors-in-c-stl-with-examples/
 // https://www.programiz.com/cpp-programming/operator-overloading
 // https://stackoverflow.com/questions/6946217/how-to-access-the-contents-of-a-vector-from-a-pointer-to-the-vector-in-c
+// https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.2-Multiplying-Matrices-and-Vectors/
+// https://www.mathsisfun.com/algebra/matrix-multiplying.html
