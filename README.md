@@ -1,2 +1,3 @@
 # UCM_CSE_165
-Labs I did for CSE 165
+This github repository has my code for my UCM CSE 165 Introduction to Object Oriented Programming course using C and C++ primarily.
+
